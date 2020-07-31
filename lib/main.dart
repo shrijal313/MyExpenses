@@ -15,7 +15,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
       theme: ThemeData(
-      
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+            headline6: TextStyle(fontFamily: 'QuickSand', 
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+            color: Colors.white),
+          
+          )
+        ),
+      fontFamily: 'QuickSand',
         primarySwatch: Colors.purple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
@@ -65,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter App"),
+        title: Text("My Expenses",),
         actions: [
           IconButton(onPressed: (){
             _startAddNewTransaction(context);
